@@ -23,16 +23,30 @@ import reportWebVitals from './reportWebVitals';
 // const element1 = <h1>Hi,{ validate(user)}</h1>;
 
 //Element Creation by JSX
-const element = React.createElement(
-  'h1',
-  {className: 'greeting'},
-  'Hello World'
-)
 
+// const element = React.createElement(
+//   'h1',
+//   {className: 'greeting'},
+//   'Hello World'
+// )
 
+//Props
+function Welcome(props){
+  return <h1>Welcome, {props.name} </h1>
+}
+function App(){
+  return( 
+  <div>
+    <Welcome name="Ali"/>
+    <Welcome name="Azam"/>
+    <Welcome name="Jahangir"/>
+    <Welcome name="Amir"/>
+    <Welcome name="Jahangir"/>
+  </div>
+ );
+}
 ReactDOM.render(
- 
-  element,
+    <App/>,
   document.getElementById('root')
 );
 
