@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 //import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Clock from './Clock';
 
 // function formatUser(user){
 //   return user.firstName +' '+ user.lastName;
@@ -31,24 +32,33 @@ import reportWebVitals from './reportWebVitals';
 // )
 
 //Props
-function Welcome(props){
-  return <h1>Welcome, {props.name} </h1>
-}
-function App(){
-  return( 
-  <div>
-    <Welcome name="Ali"/>
-    <Welcome name="Azam"/>
-    <Welcome name="Jahangir"/>
-    <Welcome name="Amir"/>
-    <Welcome name="Jahangir"/>
-  </div>
- );
-}
-ReactDOM.render(
-    <App/>,
+// function Welcome(props){
+//   return <h1>Welcome, {props.name} </h1>
+// }
+// function App(){
+//   return( 
+//   <div>
+//     <Welcome name="Ali"/>
+//     <Welcome name="Azam"/>
+//     <Welcome name="Jahangir"/>
+//     <Welcome name="Amir"/>
+//     <Welcome name="Jahangir"/>
+//   </div>
+//  );}
+
+
+
+function tick(){
+  ReactDOM.render(
+    <div>
+      <Clock Date = {new Date ()} />
+    </div>,
   document.getElementById('root')
 );
+}
+
+setInterval(tick, 1000);
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
